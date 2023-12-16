@@ -37,6 +37,7 @@ const chart = new Chart(ctx, {
     datasets: [{
       label: 'Amount',
       data: data.map(item => item.amount),
+      window: 350,
       backgroundColor: [
         'hsl(10, 79%, 65%)',
         'hsl(10, 79%, 65%)',
@@ -71,6 +72,7 @@ const chart = new Chart(ctx, {
   },
   options: {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false
